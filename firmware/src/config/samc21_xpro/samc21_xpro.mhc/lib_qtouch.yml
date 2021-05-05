@@ -1,0 +1,131 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: lib_qtouch}
+children:
+- type: Symbols
+  children:
+  - type: Boolean
+    attributes: {id: ENABLE_EVENT_LP}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: String
+    attributes: {id: LOW_POWER_KEYS}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '0'}
+  - type: String
+    attributes: {id: LOW_POWER_KEYS_MASK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: lib_qtouch, value: '0x1'}
+  - type: String
+    attributes: {id: PTC_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: lib_qtouch, value: GCLK_ID_37_FREQ}
+  - type: KeyValueSet
+    attributes: {id: SELFCAP-INPUT_0}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '3'}
+  - type: Integer
+    attributes: {id: TOUCH_CHAN_ENABLE_CNT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: Boolean
+    attributes: {id: TOUCH_ENABLE_CH_0}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: TOUCH_ENABLE_KEY_0}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Integer
+    attributes: {id: TOUCH_KEY_ENABLE_CNT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: Boolean
+    attributes: {id: TOUCH_LOADED}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: TOUCH_PRE_GENERATE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: String
+    attributes: {id: TOUCH_SCRIPT_EVENT}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: lib_qtouch, value: ''}
+  - type: String
+    attributes: {id: TOUCH_TIMER_INSTANCE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: lib_qtouch, value: RTC}
+  - type: Menu
+    attributes: {id: TOUCH_WARNING}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: description}
+        children:
+        - {type: Value}
+      - type: String
+        attributes: {id: label}
+        children:
+        - {type: Value}
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+- type: Attachments
+  children:
+  - type: DirectDependency
+    attributes: {id: Touch_timer}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: rtc}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: RTC_TMR}
+- type: ElementPosition
+  attributes: {x: '347', y: '116', id: lib_qtouch}
